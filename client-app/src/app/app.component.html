@@ -1,0 +1,11 @@
+<form [formGroup] = "urlForm">
+
+  <input placeholder="Enter URL" formControlName="url"/>
+
+  <button (click)="onSubmit()" [disabled]="!urlForm.valid">Submit</button>
+
+</form>
+
+<br>
+
+<a [attr.href] = "this.url">{{ this.token }}</a>
